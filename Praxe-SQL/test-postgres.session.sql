@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS Cars;
 DROP TABLE IF EXISTS MajiteleAuta;
 
+--car owners
 CREATE TABLE MajiteleAuta (
     ID SERIAL PRIMARY KEY,
     Jmeno VARCHAR(50) NOT NULL,
@@ -8,7 +9,7 @@ CREATE TABLE MajiteleAuta (
 );
 
 CREATE SEQUENCE IF NOT EXISTS cars_id_seq;
-
+-- cars
 CREATE TABLE Cars (
     ID INT PRIMARY KEY DEFAULT nextval('cars_id_seq'),
     MajitelID INT NOT NULL,
