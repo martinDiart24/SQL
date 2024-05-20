@@ -192,8 +192,8 @@ INSERT INTO BankovniUcty (MajitelID, MajitelAutaID, NazevBanky) VALUES
 (47, 47, 'Komerční banka'),
 (48, 48, 'ČSOB'),
 (49, 49, 'Raiffeisenbank'),
-(50, 50, 'MONETA Money Bank');
-(51, 51, 'UniCredit Bank');
+(50, 50, 'MONETA Money Bank'),
+(51, 51, 'UniCredit Bank'),
 (52, 52, 'Fio banka'),
 (53, 53, 'Air Bank'),
 (54, 54, 'mBank'),
