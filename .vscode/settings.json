@@ -1,0 +1,25 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol",
+                "enableSsl": "Disabled"
+            },
+            "server": "localhost",
+            "port": 33060,
+            "driver": "MariaDB",
+            "name": "MySQL Local",
+            "username": "root",
+            "database": "project0"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5433,
+            "driver": "PostgreSQL",
+            "name": "test-postgres",
+            "database": "postgres",
+            "username": "postgres"
+        }
+    ]
+}
