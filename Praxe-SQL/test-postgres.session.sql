@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS Cars;
 DROP TABLE IF EXISTS MajiteleAuta;
 
---car owners
+-- Vytvoření tabulky pro majitele aut
 CREATE TABLE MajiteleAuta (
     ID SERIAL PRIMARY KEY,
     Jmeno VARCHAR(50) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE MajiteleAuta (
 );
 
 CREATE SEQUENCE IF NOT EXISTS cars_id_seq;
--- cars
+-- Vytvoření tabulky pro auta
 CREATE TABLE Cars (
     ID INT PRIMARY KEY DEFAULT nextval('cars_id_seq'),
     MajitelID INT NOT NULL,
@@ -19,6 +19,7 @@ CREATE TABLE Cars (
     FOREIGN KEY (MajitelID) REFERENCES MajiteleAuta(ID)
 );
 
+-- Vložení dat do tabulky MajiteleAuta
 INSERT INTO MajiteleAuta (Jmeno, Prijmeni) VALUES
 ('Jaroslav', 'Holub'),
 ('Martin', 'Novák'),
@@ -35,8 +36,43 @@ INSERT INTO MajiteleAuta (Jmeno, Prijmeni) VALUES
 ('Marie', 'Kovářová'),
 ('Josef', 'Nový'),
 ('Eva', 'Kovaříková'),
-('David', 'Jelínek');
+('David', 'Jelínek'),
+('Anna', 'Horáková'),
+('Jakub', 'Pokorný'),
+('Petra', 'Mlíková'),
+('Václav', 'Král'),
+('Simona', 'Hrubá'),
+('Dominik', 'Fiala'),
+('Radka', 'Kolářová'),
+('Michal', 'Svoboda'),
+('Ivana', 'Růžičková'),
+('Ondřej', 'Šimek'),
+('Gabriela', 'Černá'),
+('Adéla', 'Jandová'),
+('Filip', 'Urban'),
+('Kristýna', 'Bartová'),
+('Daniel', 'Beneš'),
+('Tereza', 'Křížová'),
+('Roman', 'Veselý'),
+('Nikola', 'Sedláčková'),
+('Adam', 'Mach'),
+('Sandra', 'Pešková'),
+('Štěpán', 'Holý'),
+('Barbora', 'Navrátilová'),
+('Vít', 'Pavlíček'),
+('Klára', 'Suchá'),
+('Matěj', 'Strnad'),
+('Eliška', 'Trnková'),
+('Tomáš', 'Hruška'),
+('Veronika', 'Bláhová'),
+('Aleš', 'Polák'),
+('Denisa', 'Vávrová'),
+('Patrik', 'Zahradník'),
+('Lucie', 'Müllerová'),
+('Jan', 'Jelínek'),
+('Petra', 'Štěpánková');
 
+-- Vložení dat do tabulky Cars
 INSERT INTO Cars (MajitelID, Znacka, Model, RokVyroby) VALUES 
 (1, 'Škoda', 'Fabia', 2015),
 (2, 'Škoda', 'Octavia', 2018),
@@ -52,5 +88,44 @@ INSERT INTO Cars (MajitelID, Znacka, Model, RokVyroby) VALUES
 (12, 'Peugeot', '308', 2018),
 (13, 'Nissan', 'Qashqai', 2019),
 (14, 'Hyundai', 'i30', 2020),
-(15, 'Kia', 'Ceed', 2021);
-
+(15, 'Kia', 'Ceed', 2021),
+(16, 'Opel', 'Astra', 2015),
+(17, 'Seat', 'Leon', 2018),
+(18, 'Mazda', '3', 2019),
+(19, 'Subaru', 'Impreza', 2020),
+(20, 'Mitsubishi', 'Lancer', 2016),
+(21, 'Alfa Romeo', 'Giulietta', 2017),
+(22, 'Citroën', 'C4', 2018),
+(23, 'Fiat', '500', 2019),
+(24, 'Volvo', 'S60', 2020),
+(25, 'Mini', 'Cooper', 2015),
+(26, 'Jeep', 'Renegade', 2021),
+(27, 'Suzuki', 'Swift', 2016),
+(28, 'Jaguar', 'XE', 2017),
+(29, 'Land Rover', 'Discovery', 2018),
+(30, 'Porsche', 'Cayenne', 2019),
+(31, 'Tesla', 'Model S', 2020),
+(32, 'Chevrolet', 'Malibu', 2015),
+(33, 'Cadillac', 'CTS', 2016),
+(34, 'Chrysler', '300', 2017),
+(35, 'Dodge', 'Charger', 2018),
+(36, 'Ford', 'Mustang', 2019),
+(37, 'Lincoln', 'MKZ', 2020),
+(38, 'Buick', 'Regal', 2021),
+(39, 'GMC', 'Terrain', 2015),
+(40, 'Honda', 'Accord', 2018),
+(41, 'Toyota', 'Camry', 2019),
+(42, 'Lexus', 'ES', 2020),
+(43, 'Acura', 'TLX', 2021),
+(44, 'Infiniti', 'Q50', 2016),
+(45, 'Nissan', 'Altima', 2017),
+(46, 'Hyundai', 'Sonata', 2018),
+(47, 'Kia', 'Optima', 2019),
+(48, 'Mazda', '6', 2020),
+(49, 'Subaru', 'Legacy', 2021),
+(50, 'Volkswagen', 'Passat', 2015),
+(51, 'Audi', 'A6', 2016),
+(52, 'BMW', '5 Series', 2017),
+(53, 'Mercedes-Benz', 'E-Class', 2018),
+(54, 'Volvo', 'S90', 2019),
+(55, 'Jaguar', 'XF', 2020);
